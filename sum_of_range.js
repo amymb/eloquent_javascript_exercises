@@ -25,11 +25,17 @@ var betterRange = function(start, end, step){
     if (step === undefined){
       i++;
     }else{
-      i+=step;
+      i+=(step);
     };
   };
-  for(i = start; i<=end; steps(step)){
-    array.push(i);
-  };
+  if (step >=0){
+    for(i = start; i<=end; steps(step)){
+      array.push(i);
+    };
+  }else{
+    for(i = start; i>=end; steps(step)){
+      array.push(i);
+    };
+  }
   return array;
 };

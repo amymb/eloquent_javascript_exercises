@@ -15,3 +15,13 @@ var reverseArrayInPlace = function(array){
   };
   return array.slice(0, length);
 };
+
+
+var reverseArrayInPlace = function(array){
+  var i;
+  var length = array.length;
+  for (i = 1; i < ((length)); i++){
+    var num =(array[i]);
+    array.splice(i, 1);
+    array.unshift(num);
+  }
